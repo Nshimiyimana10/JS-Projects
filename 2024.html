@@ -1,0 +1,724 @@
+<!DOCTYPE Html>
+<html>
+<head>
+    <lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="2024.css">
+    <style>
+        #start-numb{
+            font-size: 50px;
+            display: block;
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+  
+    <div id = "para-id">
+        <h1 class = "title">Lorem ipsum dolor sit amet.</h1>
+    <p id = "new-par">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+         Eaque vel temporibus maiores dolore 
+         labore reiciendis illo veniam possimus voluptatibus cupiditate! <br>
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+          Delectus ducimus repellat quibusdam.
+        </p>
+        <p id ="new-par">I love JS</p>
+        <a href="www.joanesclaudio.io">Link to Joanes</a>
+    </div>
+<div class = "form-class">
+    <label id = "label-a">Side A:</label><br>
+    <input type = "text" id = "a-textbox"><br>
+    <label id = "label-b">Side B:</label><br>
+    <input type = "text" id = "b-textbox"><br>
+    <button id = "sub-button">Submit</button><br>
+    <label id = "label-c"></label><br>
+
+    <label id = "start-numb">0</label><br>
+    <button id = "decrease-btn">Decrease</button>
+    <button id = "reset-btn">Reset</button>
+    <button id = "increase-btn">Increase</button><br><br><br><br>
+
+    <label id = 'xlabel'></label><br>
+    <label id = 'ylabel'></label><br>
+    <label id = 'zlabel'></label><br>
+    <button id = 'rollBtn'>Roll</button> <br><br>
+    <label for= 'checkbox'>Subscribe</label>
+    <input type = 'checkbox' id = 'checkbox'><br>
+    
+    <labor for = 'visabtn'>Visa card</labor>
+    <input type = 'radio' id = 'visabtn'>
+    <labor for = 'Mastercardbtn'>Master Card</labor>
+    <input type = 'radio' id = 'Mastercardbtn'>
+    <labor for = 'PayPal'>PayPal</labor>
+    <input type = 'radio' id = 'PayPalbtn'><br>
+    <button type = 'button' id="SubmitBtn">Submit</button><br><br>
+
+    <label>Enter a temperature:</label><br>
+    <input type = "text" id = "textButton"><br>
+    <label>Convert to:</label><br>
+    <input type = "radio" id = "celButton" name = "unit">
+    <label>Celcius</label><br>
+    <input type = "radio" id = "falButton" name = "unit">
+    <label>Farnheight</label><br>
+    <button type = "button" id = "submitButton">Submit</button><br>
+    <label id = "tempDisplay"></label>
+
+    <ul id = "menu">
+        <li>HOME</li>
+        <li>ABOUT</li>
+        <li>CONTACT</li>
+    </ul>
+    <input type = "text" id = "username" placeholder = "Username" 
+    style = "background-color: grey; font-size: 30px">
+</div>
+    
+    <button id = "btn">CONTACT</button>
+
+  <body>
+    <script>
+console.log(document.body)
+console.log(document.getElementById('para-id'))
+let Output = document.head;
+console.log(Output);
+document.getElementById('')
+console.log(document.querySelector('h1'));
+console.log(document.head.innerText = 'Love from JS')
+
+let output;
+const parent = document.querySelector('parent');
+output = parent.childNodes[0].textContent;
+console.log(output);
+let div = document.createElement('div');
+div.className = 'my-elemnt';
+let text = document.createTextNode('JS DOM');
+div.appendChild(text);
+console.log(div);
+
+let age = 14;
+if(age >= 16){
+console.log('You can drive');
+} else if(age === 14 ){ 'You are almost near to drive'
+
+} else{
+    'You cannot drive'
+};
+
+let Age = window.prompt('How old are you?');
+    Age = 24;
+    Age += 1;
+
+    //console.log('Congratulations! This is your birthday!'
+   // , 'Now you are', age, 'Years old!');
+
+   if (Age >= 27){
+      console.log("Congratualtions! You're now eligible to getting the passport!");
+   }
+   else if(Age === 25){
+      console.log("Don't worry, You are about to reach to eligibility age!");
+   }
+   else{
+      console.log("You don't yet have access to the passport");
+   };
+ 
+ // let find the length of hypotenuse of right-angled triangle*/
+
+ let A; 
+ let B;
+ let C;
+
+ A = window.prompt('Enter the lenghth of a');
+ B= window.prompt('Enter the lenght of b');
+ C= Math.ceil(Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)));
+
+ console.log(" The length of C is:", c);
+ let X;
+ let Y;
+ let Z;
+
+document.getElementById("sub-button").onclick = function(){
+ X= document.getElementById("a-textbox").value;
+ X = Number(X);
+ Y = document.getElementById("b-textbox").value;
+ Y = Number(Y);
+ Z = Math.ceil(Math.sqrt(Math.pow(X, 2) + Math.pow(Y, 2)));
+ document.getElementById("label-c").innerHTML = "Side C is : " + Z;
+};
+
+let count = 0;
+document.getElementById('decrease-btn').onclick = function(){
+    count-= 1;
+document.getElementById('start-numb').innerHTML = count;
+}
+document.getElementById('reset-btn').onclick = function(){
+    count= 0;
+document.getElementById('start-numb').innerHTML = count;
+}
+document.getElementById('increase-btn').onclick = function(){
+    count+= 1;
+document.getElementById('start-numb').innerHTML = count;
+}
+
+let x;
+let y;
+let z;
+let result;
+
+document.getElementById('rollBtn').onclick = function(){
+    x = Math.floor(Math.random() * 10 +1);
+    y = Math.floor(Math.random() * 10 +1);
+    z = Math.floor(Math.random() * 10 +1);
+
+    document.getElementById('xlabel').innerHTML = x;
+    document.getElementById('ylabel').innerHTML = y;
+    document.getElementById('zlabel').innerHTML = z;
+    result = console.log(x + y + z);
+};
+
+document.getElementById('SubmitBtn').onclick = function(){
+    if(document.getElementById('checkbox').checked){
+console.log('You are subscribed');
+    }
+else{
+console.log("You're not subscribed")
+}
+}
+document.getElementById('SubmitBtn').onclick = function(){
+    if(document.getElementById('visabtn').checked){
+console.log('You select to pay with Visa Card');
+}
+else if( document.getElementById('Mastercardbtn').checked){
+console.log("You select to pay with Mastercard")
+}
+else if(document.getElementById('PayPalbtn').checked){
+console.log('You select To pay with PayPal')
+} else{
+    console.log('You have to select the payment method')
+}
+
+}
+
+for( let i = 1; i <= 10; i++){
+if( i === 5){
+    continue;
+}
+console.log(i);
+}
+
+function toCelcius(temp){
+return (temp - 32) * 5/9;
+}
+
+function toFahrenheit(temp){
+    return (temp * 9/5) + 32;
+}
+
+document.getElementById("submitButton").onclick = function(){
+    let temp;
+    if(document.getElementById("celButton").checked){
+       temp = document.getElementById("textButton").value;
+       temp = toCelcius(temp);
+       temp = document.getElementById("tempDisplay").innerHTML = temp + "C"
+    }
+    else if(document.getElementById("falButton").checked){
+        temp = document.getElementById("textButton").value;
+        temp = toFahrenheit(temp);
+        temp = document.getElementById("tempDisplay").innerHTML = temp + "F"
+    }
+    else{
+        document.getElementById("tempDisplay").innerHTML = "Please Enter a unit"
+    }
+}
+
+let fruits =     ['bananas', 'mango', 'apple', 'orange'];
+let vegetables = ['carrots', 'aubergine', 'onions'];
+let meat =       ['eggs', 'beans', 'fish'];
+let groceryList = [fruits, vegetables, meat];
+
+for( let list of groceryList){
+console.log(list);
+for (let food of list){
+console.log(food);
+}
+}
+groceryList[0][0] = 'cassava';
+groceryList[1][1] = 'potato';
+
+console.log(groceryList);
+
+let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+console.log(...numbers);
+let maxNumber = Math.max(...numbers);
+console.log(maxNumber);
+let minNumber = Math.min(...numbers);
+console.log(minNumber);
+
+let team1 = [ 'Joanes', 'John', 'Quintus'];
+let team2 = ['Jeannette', 'Baptiste', 'Cynthia'];
+team1.push(...team2);
+console.log(...team1);
+
+let newNumb = [1, 2, 3, 4, 5];
+function squareNumb( number){
+return Math.pow(number, 2)
+}
+function print(number){
+console.log(number)
+}
+
+let squaredNumb = newNumb.map(squareNumb);
+squaredNumb.forEach(print);
+
+let students = ['john', 'patric', 'daniel'];
+function capitalizeWord(word, name, set){
+set[name]= word[0].toUpperCase() + word.substring(1);
+}
+
+function print(word){
+    console.log(word)
+}
+
+let evenNumber = [2, 4, 6, 8, 10];
+
+function numbSquared(number){
+return Math.pow(number, 2);
+}
+function print(number){
+console.log(number);
+}
+
+let squaredNum = evenNumber.map(numbSquared);
+squaredNum.forEach(print);
+
+students.forEach(capitalizeWord);
+students.forEach(print);
+
+let myNumbers = [2, 7, 3, 20, 40, 15];
+
+function ascendOrder (x, y){
+return y - x;
+}
+function print(number){
+console.log(number);
+}
+let myOrderNum = myNumbers.sort(ascendOrder);
+myOrderNum.forEach(print);
+
+function firstMessage(){
+console.log('Buy this course for $500!');
+}
+function secondMessage(){
+console.log('I will be coming soon');
+}
+function thirdMessage(){
+console.log('Work Hard');
+}
+setTimeout(firstMessage, 10000);
+setTimeout(secondMessage, 5000);
+setTimeout(thirdMessage,4000);
+
+function Person(fName, lName){
+this.firstName = fName
+this.lastName = lName
+}
+Person.prototype.getFullName = function(){
+    return this.firstName + " " + this.lastName
+}
+const person1 = new Person("JOANES", "CLAUDIO");
+const person2 = new Person ("BENI", "DAMA");
+console.log(person1.getFullName());
+
+let person = {
+    firstName: 'Joanes',
+    lastName: 'Claudio',
+}
+
+let {firstName, lastName}  = person; //Object destructing
+console.log(firstName);
+console.log(lastName);
+
+class People{
+    constructor(name, age){
+this.name = name
+this.age = age 
+    }
+}
+
+ const persona = new People('Joanes Claudio', 27);
+ const personb = new People ('Beni Dama', 29);
+ const allPersons = function(){
+    return persona + ' ' + personb;
+ }
+
+ console.log(allPersons());
+
+ let message = document.getElementById("new-par");
+ let message2 = document.querySelectorAll("#new-par");
+ let heading = document.querySelector(".title");
+ console.log(heading.parentNode);
+
+ let form = document.querySelector(".form-class");
+ console.log(form.childNodes);
+ console.log(message2);
+
+ let element = document.createElement("div");
+ element.innerHTML = "<h1> Welcome to JS tutorial </h1>";
+ document.body.appendChild(element);
+ element.className = "new-elem"
+ console.log(element);
+
+ let menu = document.getElementById("menu");
+ let list = document.createElement("li");
+ list.innerHTML = "SERVICE";
+ menu.appendChild(list);
+ menu.insertAdjacentHTML("afterbegin", "<li> NEWS </li>");
+ console.log(menu);
+ 
+ let inputBox = document.getElementById("username");
+ console.log(inputBox.style);
+
+ let myButton = document.getElementById("btn");
+ myButton.onclick = function (){
+    console.log("This button is clicked");
+    myButton.addEventListener("click", function (){
+        console.log("Advancing DOM");
+    })
+ }
+let order = () =>{
+    console.log("Order placed, please call production")
+};
+
+let productionA = ()=>{
+    console.log("Order received, please start production")
+};
+
+order(productionA);
+
+let functionA = function greeting(callback){
+    console.log('Ladies and Gentlemen, good morning!')
+    callback();
+};
+
+let functionB = function welcome(){
+    console.log('Cordially welcome to this session!')
+};
+
+functionA(functionB);
+
+ let function1 = (callback) => {
+console.log("Hello darling,");
+callback();
+ }
+
+ let function2 = () =>{
+    console.clear();
+
+    console.log('I will be back soon for you!')
+    console.clear();
+
+ }
+
+ function1(function2);
+console.clear();
+ console.log('i')
+ console.log('love')
+ setTimeout(()=>{
+    console.log('to learn')
+    console.clear();
+
+ }, 3000)
+ console.log('Advanced ')
+ console.clear();
+
+ console.log('JS')
+
+ console.clear();
+
+ let stocks = {
+
+    Fruits:["strawbery", "grappes", "banana"],
+    liquid:["water", "ice"],
+    holder: ["cone", "cup", "stick"],
+    toppings:["chocolate", "peanuts"]
+ };
+
+ //USING CALLBACK(CALLBACK HELL)
+
+ let myOrder = (fruit_name, callback)=>{
+    setTimeout(()=>{
+        console.log(`${stocks.Fruits[2]} was selected`)
+        callback()
+    }, 2000)
+    
+ };
+
+ let production = ()=>{
+    setTimeout(()=>{
+        console.log("The production is now started")
+        setTimeout(()=>{
+            console.log("The fruit is cut")
+            setTimeout(()=>{
+                console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} are now added`)
+                setTimeout(()=>{
+                 console.log("The machine is started")
+                  setTimeout(()=>{
+                    console.log(`${stocks.holder[0]} is compatible with ${stocks.Fruits[2]}`)
+                    setTimeout(()=>{
+                        console.log(`${stocks.toppings[1]} is already obtained`)
+                        setTimeout(()=>{
+                          console.log("You can now test the ice cream")
+                        }, 2000)
+                      }, 3000)
+                  },  2000)
+                }, 1000)
+            }, 1000)
+        }, 2000)   
+    }, 1000)
+    
+ }
+ myOrder(2, production)
+
+ let stock = {
+
+Fruits:["strawbery", "grappes", "banana"],
+liquid:["water", "ice"],
+holder: ["cone", "cup", "stick"],
+toppings:["chocolate", "peanuts"],
+};
+
+//USING PROMISE METHOD
+
+let is_shop_open = true;
+let Order = (time, work) =>{
+    return new Promise((resolve, reject) =>
+    { if(is_shop_open){
+        setTimeout(() =>{
+            resolve(work())
+        }, time) 
+    }
+    else{
+       reject(console.log("we are very sorry, the shop is closed")) 
+    }
+    })
+};
+
+order(2000, ()=>{
+    console.log(`${stock.Fruits[0]} is selected`)
+})
+
+.then(() => {return Order(2000, ()=> {
+    console.log("The fruit is cut")
+})
+})
+
+.then(() =>{return Order (1000, ()=>{
+    console.log(`${stocks.liquid[0]} and ${stocks.liquid[1]} are added`)
+})
+})
+
+.then(() => {return Order(1000, ()=>{
+console.log("Machine is started")
+})
+})
+
+.then(() =>{return Order(2000, ()=>{
+   console.log(`${stock.holder[0]} is compatible with ${stock.Fruits[0]}`)
+})
+})
+
+.then(() => {return order(3000, ()=>{
+    console.log(`${stock.toppings[0]} is now obtained`)
+})
+})
+
+.then(() => { return Order(2000, () => {
+    console.log("YOU CAN TEST THE NEW ICE CREAM!!!")
+})
+
+})
+
+.catch(()=>{
+    console.log(" We're sorry please, you came late")
+})
+
+.finally(()=>{
+    console.log("We already closed the business of today")
+})
+
+// USING ASYNC and AWAIT METHOD
+
+let shopIsOpen = true;
+
+function time(ms){
+return new Promise(resolve, reject)
+if(shopIsOpen){
+    setTimeout(resolve, ms)
+}
+else{
+    console.log("shop is closed")
+}
+}
+
+async function kitchen(){
+    try {
+      await time(2000)
+      console.log(`${stocks.Fruits[0]} is selected`)
+
+      await time(1000)
+      console.log("Production is started")
+
+      await time(2000)
+      console.log("The fruit is chopped")
+
+      await time(1000)
+      console.log(`${stock.liquid[0]} and ${stock.liquid[1]} are added`)
+
+      await time(1000)
+      console.log("Machine is started")
+
+      await time(2000)
+      console.log(`${stock.holder[0]} fits with the fruit chosen`)
+
+      await time(3000)
+      console.log(`Basing on the ingredients used ${stock.toppings[0]} is obtained`)
+
+      await time("Finally, ice cream can be served now")
+    }
+
+    catch(error){
+console.log("No more working today")
+    }
+
+    finally{
+console.log("End of the day, shop is closed")
+    }
+}
+
+kitchen();
+
+let myArray = [10, 20, 30, 40, 80];
+let Sum = 0;
+ myArray.forEach((num)=> Sum += num);
+ console.log(Sum);
+
+ let Sum2= 0;
+ for( let i = 0; i < myArray.length; i++){
+    Sum2 += myArray[i];
+ };
+
+ let sum = myArray.reduce((acc, curr) => acc + curr, 0)
+ console.log(sum);
+
+// Capitalize the first letter of each string in an array
+ let myStrings = ['kevin', 'joanes', 'betty'];
+     myStrings.reverse();
+     console.log(myStrings);
+
+  let myNewString = myStrings.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+ console.log(myNewString);
+
+ let name = 'Joanes';
+ let newName = name.split('').reverse().join('');
+ console.log(newName);
+
+// ascending order, descending order, positive numbers, negative numbers, sum
+ let arrayNumbers = [20, 30, 10, 14, 18, 100, -2, -19, 0, -5];
+
+ //ascending order 
+let ascOrder = arrayNumbers.sort((a, b)=> b - a);
+//descending order
+let descOrder = arrayNumbers.sort((a, b) => a - b);
+//positive numbers
+let positiveNum = arrayNumbers.filter( function(numb) {
+    return numb >= 0
+});
+//negative numbers
+let negativeNum = arrayNumbers.filter(numb => numb < 0);
+// sum method 1
+let addition = 0; 
+for(let i = 0; i < arrayNumbers.length; i++){
+addition += arrayNumbers[i]
+};
+// sum method 2
+let addNumbers = arrayNumbers.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue
+}, 0) 
+
+// powering each number by 2, multiply each number by 2, multiply each number by itself
+let myNumber = [2, 4, 5, 7, 12, 10]
+let squaredNumbers = myNumber.map(function(element){
+    return Math.pow(element, 2)
+});
+let multiplyNumber = myNumber.map(function(element){
+    return element * 2;
+})
+
+console.log(multiplyNumber)
+console.log(squaredNumbers);
+console.log(addNumbers);
+console.log(addition);
+console.log(positiveNum);
+console.log(negativeNum);
+console.log(descOrder);
+console.log(ascOrder);
+// Synchronious function 
+
+console.log('Hello Mr.BJD');
+setTimeout(console.log('Hello Mr.JOANES'), 3000);
+console.log('Hello Mr.MOX');
+setTimeout(console.log('Hello Mr.QUINTUS'), 2000);
+
+//PROMISE
+
+let isRestaurantOpen = true;
+ function serveClient(time, work){
+    return new Promise(resolve, reject)
+    if(isRestaurantOpen = true){
+        setTimeout(resolve(work), time)
+    }
+    else{
+        reject("Sorry, we have already closed the business")
+    }
+ }
+
+ serveClient(2000, function(){
+    console.log("The kitchen is ready, please start the job")
+ })
+
+ .then(() => {return serveClient(3000, function(){
+    console.log("Prepare vegetables")
+ })
+})
+ 
+ .catch(() => {
+    console.log("Sorry, You are too late")
+ })
+
+ .finally(() => {
+    console.log("It is enough for today")
+ })
+    
+   
+ 
+
+// ASYNC AWAIT 
+
+async function knowHowLearnJS(){
+    try{
+     await fetch(htpps = "www.google/how can i learn_JS in fast_way?")
+    }
+    catch(error){
+     console.log("Your internet is not stable, Please check_YOUR CONNECTION")
+    }
+
+    finally{
+      console.log("Your data is found")
+    }
+};
+
+knowHowLearnJS();
+
+</script>
+</body>
+</html>
